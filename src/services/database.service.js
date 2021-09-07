@@ -1,5 +1,5 @@
 const MockDatabaseService = require("./class.mock.database.service");
-const FirestoreDatabaseService = require("../../../../sample-master-2021-firestore-addon/services/class.firestore.database.service");
+const FirestoreDatabaseService = require("./class.firestore.database.service");
 let db;
 if(!!process.env.TESTING) {
     db = new MockDatabaseService();
