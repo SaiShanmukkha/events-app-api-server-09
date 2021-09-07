@@ -50,7 +50,7 @@ pipeline {
             steps {
                 echo "build id = ${env.BUILD_ID}"
                 echo 'Tests passed on to build Docker container'
-                sh 'gcloud builds submit . -t gcr.io/$GOOGLE_CLOUD_PROJECT/api-server-image:v2.${env.BUILD_ID} .'
+                sh "gcloud builds submit . -t gcr.io/$GOOGLE_CLOUD_PROJECT/api-server-image:v2.${env.BUILD_ID} ."
             }
         }        
          stage('Stage 5') {
